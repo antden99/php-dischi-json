@@ -13,8 +13,12 @@
     <title>PHP Dischi JSON</title>
   </head>
   <body>
-    <div class="container bg-dark text-white">ciao</div>
-    <div class="ciao">antonio</div>
+    <div id="app">
+      <div class="container bg-dark text-white">
+        <div>{{message}}</div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
       integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
