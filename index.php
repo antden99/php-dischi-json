@@ -19,7 +19,7 @@
         <div class="logo"><i class="fa-brands fa-spotify text-success logo"></i></div>
         <div class="row ">
           <div class="col-4 h-100 my-3" v-for="disc in discsList" >
-            <div class="card text-center p-4 bg_card text-white">
+            <div class="card text-center p-4 bg_card text-white h-100">
                 <img :src="disc.poster" alt="" class="w-100 h-100">
                 <div class="fw-bold">{{disc.title}}</div>
                 <div>{{disc.author}}</div>
