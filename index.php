@@ -15,17 +15,27 @@
   </head>
   <body class="bg-dark">
     <div id="app">
-      <div class="container text-white">
+      <div class="container text-white position-relative">
         <div class="logo"><i class="fa-brands fa-spotify text-success logo"></i></div>
         <div class="row ">
-          <div class="col-4 h-100 my-3" v-for="disc in discsList" >
+          <div class="col-4 h-100 my-3" v-for="(disc,index) in discsList" >
             <div class="card text-center p-4 bg_card text-white h-100">
-                <img :src="disc.poster" alt="" class="w-100 h-100">
+                <img :src="disc.poster" alt="" class="w-100 h-100" @click="open_modal(disc)">
                 <div class="fw-bold">{{disc.title}}</div>
                 <div>{{disc.author}}</div>
                 <div class="fw-bold ">{{disc.year}}</div>
             </div>
           </div>
+        </div>
+        <div v-if="modaleAperta" >
+              <div class="col-4 position-absolute top-50 start-50 translate-middle text-center">
+                <div class="card text-dark">
+                  <img :src="contenutoModale.poster" alt="">
+                  <div class="fw-bold">{{contenutoModale.title}}</div>
+                  <div>{{contenutoModale.author}}</div>
+                  <div class="fw-bold ">{{contenutoModale.year}}</div>
+                </div>
+              </div>
         </div>
       </div>
     </div>
