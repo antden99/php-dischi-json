@@ -41,7 +41,7 @@ createApp({
       this.contenutoModale = card;
     },
 
-    closeModel() {
+    closeModal() {
       this.modaleAperta = false;
     },
   },
